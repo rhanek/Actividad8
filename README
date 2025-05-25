@@ -1,0 +1,53 @@
+NEWAUTHOR {
+    http://localhost:3000/api/authors
+    {
+        "name": "João Silva",
+        "email": "joao@email.com",
+        "image": "https://img.com/joao.jpg"
+    }
+}
+
+NEWPOST {
+    http://localhost:3000/api/posts
+    {
+        "title": "Meu primeiro post",
+        "description": "Conteúdo do post...",
+        "category": "Tecnologia",
+        "author_id": 1
+    }
+}
+
+LISTPOSTS {
+    http://localhost:3000/api/posts
+    {
+        [
+            {
+                "id": 1,
+                "title": "Meu primeiro post",
+                "description": "Conteúdo do post...",
+                "created_at": "2025-05-25T02:54:14.000Z",
+                "category": "Tecnologia",
+                "author_id": 1,
+                "name": "João Silva",
+                "email": "joao@email.com",
+                "image": "https://img.com/joao.jpg"
+            }
+        ]
+    }
+}
+
+LISTESPECIFCPOST {
+    http://localhost:3000/api/posts/author/1
+    {
+        [
+            {
+                "id": 1,
+                "title": "Meu primeiro post",
+                "description": "Conteúdo do post...",
+                "created_at": "2025-05-25T02:54:14.000Z",
+                "category": "Tecnologia",
+                "author_id": 1
+            }
+        ]
+    }
+}
